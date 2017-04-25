@@ -1,0 +1,269 @@
+@charset "utf-8";
+
+/* Anchors */
+a, a:visited, a:active {
+	color: inherit;
+	text-decoration:none;
+}
+
+/* Page style */
+body {
+	background-image: url(../img/back.jpg);
+	font-size: 15px;
+	line-height: 20px;
+	margin: 0;
+	color: #333;
+	font-family: Arial,sans-serif;
+	overflow: auto;
+	max-width: 950px;
+	min-width: 950px;
+}
+
+#shadow{
+	-webkit-box-shadow: 0 0 15px #ddd;
+	-moz-box-shadow: 0 0 15px #ddd;
+	box-shadow: 0 0 15px #ddd;
+	background-color: #FFF;
+}
+
+.box-shadow{
+	filter:
+		progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=0,strength=0),
+		progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=45,strength=1),
+		progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=90,strength=2),
+		progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=135,strength=5),
+		progid:DXImageTransform.Microsoft.Shadow(color=#cccccc,direction=180,strength=5),
+		progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=225,strength=5),
+		progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=270,strength=2),
+		progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=315,strength=1);
+}
+
+body:last-child .box-shadow {
+      /* Remove filter from IE9 */
+      filter: none;
+}
+
+#roundshadow{
+	-webkit-border-radius: 0px 0px 15px 0px;
+	-moz-border-radius: 0px 0px 15px 0px;
+	border-radius: 0px 0px 15px 0px;
+	-webkit-box-shadow: 0 0 15px #ddd;
+	-moz-box-shadow: 0 0 15px #ddd;
+	box-shadow: 0 0 15px #ddd;
+	background-color: #FFF;	
+}
+
+.center{
+	margin: 0 auto;
+	width: 50%;
+}
+
+.float{
+	float: left;
+}
+
+/* Head */
+
+#mainheader{
+	background-color: #FFF;
+}
+
+#headline{
+	height: 15px;
+	background-color: #936;	
+	-webkit-border-radius: 0px 0px 15px 0px;
+	-moz-border-radius: 0px 0px 15px 0px;
+	border-radius: 0px 0px 15px 0px;
+}
+
+#title{
+	padding-top: 30px;
+	margin-left: 15px;
+	font-weight: bold;
+	font-size: 24px;
+	font-family: 'Iceland', cursive;
+	color: #FFF;
+	text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+#lang{
+	text-align: right;
+	font-weight: bold;
+	font-family: 'Iceland', cursive;
+	font-size: 18px;
+	padding-top:15px;
+	margin-right:15px;
+}
+
+#lang ul{
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+}
+
+#lang li{
+	display: inline;
+}
+
+#lang li:hover{
+	color: #936;
+}
+
+#lang a{
+	margin-left: 10px;
+}
+
+.activelang{
+	color: #936 !important;
+}
+
+.dottedhead{
+	border-bottom: 1px solid #CCC;
+	width: auto;
+	margin-top:15px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+/* Content */
+
+#maincontent{
+	width: auto;
+	height: auto;
+	overflow: auto;
+	background-color: #FFF;
+	padding-bottom: 15px;
+}
+
+#maincontent li {
+	margin-bottom: 16px;
+}
+
+
+#text{
+	min-height: 360px;
+	text-align: justify;
+	margin: 15px;
+	width: 590px;
+	font-family: 'Nova Square', cursive;
+	color: #333;
+	font-size: 14px;
+}
+
+#text li{
+	color: #936;
+}
+
+#text a, #text a:visited, #text a:active{
+	text-decoration: underline;
+	color: #936;
+	font-weight: bold;
+}
+
+#houses{
+	margin-top: 15px;
+	margin-left: 15px;
+	padding-right: 1px;
+	width: 590px;
+	height: 90px;
+	background-image: url(../img/houses.png);
+}
+
+#rightcol{
+	margin-top: 15px;
+	margin-right: 15px;
+	width: auto;
+	height: auto;
+	float: right;
+	background-color: #FFC;
+}
+
+.dottedright{
+	border-bottom: 1px solid #CCC;
+	width: auto;
+	margin-top:15px;
+	margin-left: 6px;
+	margin-right: 6px;
+	margin-bottom: 15px;
+}
+
+.contactdata{
+	text-align: justify;
+	color: #936;
+	font-family: 'Iceland', cursive;
+	line-height: 15px;
+	font-size: 14px;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+#contactdata a, #contactdata a:visited, #contactdata a:active{
+	text-decoration: underline;
+}
+
+.bold{
+	font-weight:bold;
+}
+
+.fullName {
+	font-size: 20px;
+}
+
+.border{
+	border: 1px solid #4C3C1B;
+	padding: 5px;
+	background-color: #EFEECB;
+}
+
+/* Footer */
+
+#menu{
+	background-color: #936;
+	height: 50px;
+	color: #FFFFFF;
+	/*-webkit-border-radius: 0px 0px 15px 0px;
+	-moz-border-radius: 0px 0px 15px 0px;
+	border-radius: 0px 0px 15px 0px;*/
+}
+
+#inmenu ul{
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+}
+
+#inmenu li{
+	display: inline;
+	-webkit-transition: background-color 1s;
+	-moz-transition: background-color 1s;
+	transition: background-color 1s;
+}
+
+#inmenu li:hover{
+	background-color: #FFC;
+	color: #936;
+}
+
+#inmenu a{
+	line-height: 50px;
+	padding: 0 15px;
+	font-weight: bold;
+	font-size: 20px;
+	font-family: 'Iceland', cursive;
+}
+
+.activemenu{
+	float: left;
+	background-color: #FFC !important;
+	color: #936 !important;
+}
+
+.credits{
+	text-align: right;
+	font-family: 'Nova Square', cursive;
+	font-size:10px;
+	color:#c7c7c7;
+	margin-bottom:5px;
+	margin-top:7px;
+	margin-right: 15px;
+}
