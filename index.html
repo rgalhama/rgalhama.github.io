@@ -1,105 +1,143 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Raquel Garrido Alhama - Home</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-	<link href='https://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nova+Square' rel='stylesheet' type='text/css'>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Computational Modelling of language learning, language evolution, visual and auditory word recognition. Syntactic parsing, part-of-speech tagging, connectionism, neural-symbolic integration">
+    <meta name="keywords" content="Computational Modelling of language learning, language evolution, visual and auditory word recognition. Syntactic parsing, part-of-speech tagging, connectionism, neural-symbolic integration">
+    <meta name="author" content="Raquel G. Alhama">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raquel G. Alhama</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Iceland" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet">
 
-	</head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72727851-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-72727851-1');
+    </script>
 
-	<body class="center">
-    	<div id="shadow" class="box-shadow">
-            <div id="footer">
-                <div id="menu">
-                  <div id="inmenu">
-                      <ul>
-                          <li class="activemenu">
-                              <a href="index.html">Home</a>
-                          </li>
-                          <li class="float">
-                              <a href="publications.html">Publications</a>
-                          </li>
-        <!--
-                          <li class="float">
-                              <a href="posters_talks.html">Posters & Talks</a>
-                          </li>
-        -->
-                          <li class="float">
-                              <a href="teaching.html">Teaching</a>
-                          </li>
-                          <li class="float">
-                              <a href="resources.html">Software</a>
-                          </li>
-                      </ul>
-                  </div><!--/#inmenu-->
-                </div><!--/#menu-->
-            </div><!--/#footer-->
+    <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        file = elmnt.getAttribute("include-html");
+        if (file) {
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              elmnt.removeAttribute("include-html");
+              includeHTML();
+            }
+          }      
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          return;
+        }
+      }
+    };
+    </script>
+
+    <script>
+      function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+          vars[key] = value;
+        });
+        return vars;
+      }
+    </script>
+  </head>
+
+  <body class="center">
     
+    <div id="shadow" class="box-shadow">
 
-            <div id="maincontent">
-		
-		    
-		<div id="title">
-                  Hello, World!
-                </div><!--/#title-->
-
-                <div id="text" class="float">            
-                    <br />
-		    I am a postdoctoral researcher at the <a href="http://www.bcbl.eu/?lang=en">BCBL</a> since October 2017. I work with Ram Frost and Blair Armstrong on Computational Models of Visual Word Recognition.
-		    <br/>
-		    <br/>
-		    Previously, I was a PhD Candidate at the <a href="http://www.illc.uva.nl/" target="_blank">Institute of Logic, Language and Computation</a>, at the Universiteit van Amsterdam, where I worked with Jelle Zuidema, Carel Ten Cate and Remko Scha on Computational Modelling of Artificial Language Learning.
-                    <br />
-                    <br />
-		    <!--Before, I completed a master's degree in <a href="http://www.ub.edu/ccil/?q=en/content/introduction">Cognitive Science and Language</a>, and even before that, I became a Superior Engineer in Informatics (which is fancy for "Computer Scientist").-->
-
-		<h3>NEWS:</h3>
-		Our paper was accepted for the Journal of Artificial Intelligence Research (special track on Deep Learning, Knowledge Representation, and Reasoning)!
-
-                </div><!--/#text-->
-
-                <div id="rightcol">
-                    <div id="pic">
-                        <img src="img/raquel-home.jpg" alt="Raquel Garrido Alhama" width="300" class="border"/>
-                    </div><!--/#pic-->
-                    <div class="dottedright"></div>
-                    <div class="contactdata">
-                    	<div class="bold fullName">Raquel G. Alhama</div>
-                  	</div>
-                    <div class="dottedright"></div>
-                   <div class="contactdata">
-                        <div class="bold">Interests</div>
-			Computational Modelling of:
-			<br/>
-			language learning, language evolution,
-			<br/>
-			visual and auditory word recognition.
-			<br/>
-			Syntactic parsing, part-of-speech tagging,
-			<br>
-			connectionism,
-			neural-symbolic integration.<br />  
-                        <br />      
-                        <div class="bold">E-mail</div>
-                        <a href="mailto:rgalhama@gmail.com" target="_blank">[ rgalhama | [@,gmail,.,com] ]</a>                               
-                    </div><!--/#contactdata-->
-                    <div class="dottedright"></div>
-                </div><!--/#rightcol-->
-                <div id="houses" class="float"></div><!--/#houses-->
-            </div><!--/#maincontent-->
-		</div><!--/#shadow-->
-
-		<div id="roundshadow" class="box-shadow">
-        <div id="mainheader">
-            <div id="headline"></div>
-            <!--<div class="dottedhead"></div>-->
-        </div><!--/#mainheader-->            
-		</div><!--/roundshadow-->
-          
-        <div id="credits">
-            <p class="credits">Web Design by <a style="color:#9b9595" href="http://www.albertonieto.info/" target="_blank">albertonieto.info.</a></p>
-        </div><!--/#credits-->
-	</body>
+      <div id="footer">
+        <div id="menu">
+          <div id="inmenu">
+            <ul>
+              <li class="float" id="home-nav">
+                <a href="index.html?p=home">Home</a>
+              </li>
+              <li class="float" id="publications-nav">
+                <a href="index.html?p=publications">Publications</a>
+              </li>
+              <!--<li class="float" id="talks-nav">
+                <a href="index.html?p=talks">Posters & Talks</a>
+              </li>-->
+              <li class="float" id="teaching-nav">
+                <a href="index.html?p=teaching">Teaching</a>
+              </li>
+              <li class="float" id="software-nav">
+                <a href="index.html?p=software">Software</a>
+              </li>
+            </ul>
+          </div><!--/#inmenu-->
+        </div><!--/#menu-->
+      </div><!--/#footer-->
+      
+      <div id="maincontent">
+        
+        <div include-html="home.html" id="home" class="hide"></div>
+        <div include-html="publications.html" id="publications" class="hide"></div>
+        <div include-html="teaching.html" id="teaching" class="hide"></div>
+        <div include-html="software.html" id="software" class="hide"></div>
+        
+        <div include-html="rightcol.html"></div>
+        
+        <div id="houses" class="float hide"></div>
+    
+      </div>
+    
+    </div>
+    
+    <div include-html="prefooter.html"></div>
+    
+    <div include-html="credits.html"></div>
+    
+    <script>
+      var page = getUrlVars()["p"];
+      switch(page) {
+        case 'publications':
+          showContent();
+          activateNavElement();
+        break;
+        case 'teaching':
+          showContent();
+          activateNavElement();
+        break;
+        case 'software':
+          showContent();
+          activateNavElement();
+        break;
+        default:
+          var element = document.getElementById('home');
+          element.classList.add("show");
+          var activehome = document.getElementById('home-nav');
+          activehome.classList.add("activemenu");
+          var houses = document.getElementById('houses');
+          houses.classList.add("show");
+      }
+      function showContent() {
+        var element = document.getElementById(page);
+        element.classList.add("show");
+      }
+      function activateNavElement() {
+        var navCopy = "-nav";
+        var navPage = page.concat(navCopy);
+        var navElement = document.getElementById(navPage);
+        navElement.classList.add("activemenu");
+      }
+    </script>
+    
+    <script>includeHTML();</script>
+  
+  </body>
 </html>

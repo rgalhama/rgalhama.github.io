@@ -215,7 +215,7 @@ body:last-child .box-shadow {
 	background-color: #EFEECB;
 }
 
-.bib{
+.bib,.res,.teach{
 	color: #333;
 }
 
@@ -268,8 +268,8 @@ body:last-child .box-shadow {
 
 .activemenu{
 	float: left;
-	background-color: #FFC !important;
-	color: #936 !important;
+	background-color: #FFC;
+	color: #936;
 }
 
 .credits{
@@ -280,4 +280,16 @@ body:last-child .box-shadow {
 	margin-bottom:5px;
 	margin-top:7px;
 	margin-right: 15px;
+}
+
+.credits a{
+	color: #9b9595;
+}
+
+/* Navigation */
+.hide{
+	display: none;
+}
+.show{
+	display: block;
 }
