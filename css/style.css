@@ -215,6 +215,20 @@ body:last-child .box-shadow {
 	background-color: #EFEECB;
 }
 
+.bib{
+	color: #333;
+}
+
+.cite{
+	padding-top: 8px;
+	font-size: 12px;
+	color: #333;
+}
+
+.cite a{
+	color: #936;;
+}
+
 /* Footer */
 
 #menu{
