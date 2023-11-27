@@ -1,3 +1,4 @@
 /.sblm/
 /.vagrant/
 Vagrantfile
+.DS_Store

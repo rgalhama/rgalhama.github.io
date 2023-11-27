@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+/* Variables */
+root {
+  --primarycolor: #936;
+  --secondarycolor: #FFC;
+}
+
 /* Anchors */
 a, a:visited, a:active {
 	color: inherit;
@@ -70,7 +76,7 @@ body:last-child .box-shadow {
 
 #headline{
 	height: 15px;
-	background-color: #936;	
+	background-color: var(--primarycolor);	
 	-webkit-border-radius: 0px 0px 15px 0px;
 	-moz-border-radius: 0px 0px 15px 0px;
 	border-radius: 0px 0px 15px 0px;
@@ -106,7 +112,7 @@ body:last-child .box-shadow {
 }
 
 #lang li:hover{
-	color: #936;
+	color: var(--primarycolor);
 }
 
 #lang a{
@@ -114,7 +120,7 @@ body:last-child .box-shadow {
 }
 
 .activelang{
-	color: #936 !important;
+	color: var(--primarycolor) !important;
 }
 
 .dottedhead{
@@ -151,12 +157,12 @@ body:last-child .box-shadow {
 }
 
 #text li{
-	color: #936;
+	color: var(--primarycolor);
 }
 
 #text a, #text a:visited, #text a:active{
 	text-decoration: underline;
-	color: #936;
+	color: var(--primarycolor);
 	font-weight: bold;
 }
 
@@ -175,7 +181,7 @@ body:last-child .box-shadow {
 	width: auto;
 	height: auto;
 	float: right;
-	background-color: #FFC;
+	background-color: var(--secondarycolor);
 }
 
 .dottedright{
@@ -189,7 +195,7 @@ body:last-child .box-shadow {
 
 .contactdata{
 	text-align: justify;
-	color: #936;
+	color: var(--primarycolor);
 	font-family: 'Iceland', cursive;
 	line-height: 15px;
 	font-size: 14px;
@@ -226,13 +232,13 @@ body:last-child .box-shadow {
 }
 
 .cite a{
-	color: #936;;
+	color: var(--primarycolor);
 }
 
 /* Footer */
 
 #menu{
-	background-color: #936;
+	background-color: var(--primarycolor);
 	height: 50px;
 	color: #FFFFFF;
 	/*-webkit-border-radius: 0px 0px 15px 0px;
@@ -254,8 +260,8 @@ body:last-child .box-shadow {
 }
 
 #inmenu li:hover{
-	background-color: #FFC;
-	color: #936;
+	background-color: var(--secondarycolor);
+	color: var(--primarycolor);
 }
 
 #inmenu a{
@@ -268,8 +274,8 @@ body:last-child .box-shadow {
 
 .activemenu{
 	float: left;
-	background-color: #FFC;
-	color: #936;
+	background-color: var(--secondarycolor);
+	color: var(--primarycolor);
 }
 
 .credits{
