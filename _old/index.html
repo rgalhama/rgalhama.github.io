@@ -27,12 +27,6 @@
       for (i = 0; i < z.length; i++) {
         elmnt = z[i];
         file = elmnt.getAttribute("include-html");
-
-        var page = getUrlVars()["p"];
-        if (page === "koala" && file === "rightcol.html") {
-          file = "rightcol_koala.html";
-        }
-
         if (file) {
           xhttp = new XMLHttpRequest();
           xhttp.onreadystatechange = function() {
@@ -47,22 +41,23 @@
               includeHTML();
             }
           }
-          xhttp.open("GET", file, true);
+          http.open("GET", file, true);
           xhttp.send();
           return;
         }
       }
-    }
-
-    function getUrlVars() {
-      var vars = {};
-      var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
-        vars[key] = value;
-      });
-      return vars;
-    }
+    };
   </script>
 
+    <script>
+      function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+          vars[key] = value;
+        });
+        return vars;
+      }
+    </script>
   </head>
 
   <body class="center">
