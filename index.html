@@ -20,60 +20,60 @@
     </script>
 -->
 
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    file = elmnt.getAttribute("include-html");
-    if (file) {
-      console.log("Loading file: " + file); // Debug: Log the file being loaded
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {
-            elmnt.innerHTML = this.responseText;
-          }
-          if (this.status == 404) {
-            elmnt.innerHTML = "Page not found.";
-          }
-          elmnt.removeAttribute("include-html");
-          includeHTML(); // Recursively process nested includes
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        file = elmnt.getAttribute("include-html");
+        if (file) {
+          console.log("Loading file: " + file); // Debug: Log the file being loaded
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {
+                elmnt.innerHTML = this.responseText;
+              }
+              if (this.status == 404) {
+                elmnt.innerHTML = "Page not found.";
+              }
+              elmnt.removeAttribute("include-html");
+              includeHTML(); // Recursively process nested includes
+            }
+          };
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          return; // Exit loop for asynchronous operation
         }
-      };
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      return; // Exit loop for asynchronous operation
+      }
     }
-  }
-}
 
-function getUrlVars() {
-  var vars = {};
-  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
-    vars[key] = value;
-  });
-  return vars;
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  var page = getUrlVars()["p"];
-  console.log("Current page: " + page); // Debug: Log the current page
-  if (page === "koala") {
-    var rightColElement = document.querySelector('[include-html="rightcol.html"]');
-    if (rightColElement) {
-      console.log("Switching right column to rightcol_v2.html"); // Debug: Log the switch
-      rightColElement.setAttribute("include-html", "rightcol_v2.html");
-    } else {
-      console.log("Right column element not found!");
+    function getUrlVars() {
+      var vars = {};
+      var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+        vars[key] = value;
+      });
+      return vars;
     }
-  } else {
-    console.log("No changes needed for right column.");
-  }
-  includeHTML();
-});
-</script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var page = getUrlVars()["p"];
+      console.log("Current page: " + page); // Debug: Log the current page
+      if (page === "koala") {
+        var rightColElement = document.querySelector('[include-html="rightcol.html"]');
+        if (rightColElement) {
+          console.log("Switching right column to rightcol_koala.html"); // Debug: Log the switch
+          rightColElement.setAttribute("include-html", "rightcol_koala.html");
+        } else {
+          console.log("Right column element not found!");
+        }
+      } else {
+        console.log("No changes needed for right column.");
+      }
+      includeHTML();
+    });
+  </script>
 
   </head>
 
