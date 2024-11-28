@@ -36,7 +36,13 @@
               elmnt.removeAttribute("include-html");
               includeHTML();
             }
-          }      
+          };
+          var page = getUrlVars()["p"];
+          if (page === "koala") {
+            file = "rightcol_koala.html";
+          } else {
+            file = "rightcol.html";
+          }
           xhttp.open("GET", file, true);
           xhttp.send();
           return;
