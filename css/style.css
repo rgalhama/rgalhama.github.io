@@ -299,3 +299,29 @@ body:last-child .box-shadow {
 .show{
 	display: block;
 }
+
+/* koala photos */
+    #photo-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .photo-item {
+        text-align: center;
+    }
+
+    .photo {
+        width: 150px;
+        height: 150px;
+        object-fit: cover; /* Ensures the image fits without distortion */
+        border-radius: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .photo-name {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #333;
+    }
